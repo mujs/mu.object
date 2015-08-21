@@ -1,4 +1,4 @@
-define('mu.object.extend', function (require) {
+define('mu.object.merge', function (require) {
   'use strict';
 
   var each   = require('mu.list.each'),
@@ -9,9 +9,9 @@ define('mu.object.extend', function (require) {
     return a;
   };
 
-  var extend = function (/* objs... */) {
+  var merge = function (/* objs... */) {
     return reduce(arguments, {}, mixin);
   };
 
-  return extend;
+  return merge;
 });
